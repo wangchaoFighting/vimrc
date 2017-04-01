@@ -22,7 +22,7 @@ syntax on		" 语法高亮
 set showcmd		" 输入的命令显示出来，看的清楚些  
 set autoindent		" vim使用自动对齐，也就是把当前行的对齐格式应用到下一行
 set smartindent		" 依据上面的对齐格式，只能的选择对齐方式
-colorscheme solarized	" 设置颜色主题
+colorscheme molokai	" 设置颜色主题 solarized
 set background=dark
 set shiftwidth=4	" Tab is 4 spaces wide
 set softtabstop=4	" count 4 spaces as tab 
@@ -40,12 +40,13 @@ set guifont=Courier\ New:h13
 nnoremap <C-tab>   :bn<CR>  
 nnoremap <C-s-tab> :bp<CR>
 if has("gui_running")
-    set guioptions-=m  " remove menu bar
-    set guioptions-=T  " remove toolbar
-    set guioptions-=r  " remove right-hand scroll bar
-    set guioptions-=l  " remove left-hand scroll bar
-    set guioptions-=L  " remove left-hand scroll bar even if there is a vertical split
-    set guioptions-=b  " remove bottom scroll bar
+    set guioptions-=m   " remove menu bar
+    set guioptions-=T   " remove toolbar
+    set guioptions-=r   " remove right-hand scroll bar
+    set guioptions-=l   " remove left-hand scroll bar
+    set guioptions-=L   " remove left-hand scroll bar even if there is a vertical split
+    set guioptions-=b   " remove bottom scroll bar
+    set transparency=10 " 设置透明
 endif
 """""""""""""""""""""""YCM配置"""""""""""""""""""""""""
 let g:ycm_key_list_previous_completion = ['<Up>']
