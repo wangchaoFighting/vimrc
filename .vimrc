@@ -19,7 +19,7 @@ filetype plugin indent on
 """""""""""""""""""""通用配置""""""""""""""""""""""""""
 set nu			" 显示行号
 syntax on		" 语法高亮
-set showcmd		" 输入的命令显示出来，看的清楚些  
+set showcmd		" 显示输入的命令
 set autoindent		" vim使用自动对齐，也就是把当前行的对齐格式应用到下一行
 set smartindent		" 依据上面的对齐格式，只能的选择对齐方式
 colorscheme molokai	" 设置颜色主题 solarized
@@ -67,7 +67,8 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " let g:ycm_key_list_previous_completion = '<C-S-Space>'
 let g:ycm_key_invoke_completion = '<C-S-Space>'
 let g:ycm_goto_buffer_command = 'vertical-split'   " 'same-buffer' 'new-tab''vertical-split'
-
+" set completeopt=longest,menu  " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 """""""""""""""""""""NERDTREE""""""""""""""""""""""""""
 "let NERDTreeQuitOnOpen=1              "打开文件时关闭树
 let NERDTreeShowBookmarks=1           "显示书签
